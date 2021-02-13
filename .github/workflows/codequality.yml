@@ -15,12 +15,15 @@ jobs:
     steps:
     - name: Checkout Project
       uses: actions/checkout@v1
+
     - name: Use Node.js 14
       uses: actions/setup-node@v1
       with:
         node-version: 14
+
     - name: Install Dependencies
-      run: npm ci
+      run: yarn
+
     - name: Run ESLint
       uses: icrawl/action-eslint@v1
       with:
@@ -32,11 +35,14 @@ jobs:
     steps:
     - name: Checkout Project
       uses: actions/checkout@v1
+
     - name: Use Node.js 14
       uses: actions/setup-node@v1
       with:
         node-version: 14
+
     - name: Install Dependencies
-      run: npm ci
+      run: yarn
+
     - name: Run TSC
       uses: icrawl/action-tsc@v1
